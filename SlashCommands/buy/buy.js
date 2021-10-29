@@ -28,7 +28,12 @@ module.exports = {
         .setTimestamp()
         .setFooter('Dankord', 'https://cdn.discordapp.com/icons/902972970790682644/f4c2f5ea801964663e1f7f6b3386c1c1.png?size=96');
 
-        user.send({ embeds: [exampleEmbed] });
-        interaction.followUp({ content: `${user} I have send you a DM with our current shops.` });
+
+        if(interaction.guild != null){
+            interaction.followUp({ content: `${user} I have send you a DM with our current shops.` });
+            user.send({ embeds: [exampleEmbed] });
+        }else{
+            interaction.followUp({  embeds: [exampleEmbed] });
+        }
     },
 };
