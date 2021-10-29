@@ -1,0 +1,22 @@
+{
+    "name": "",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@chilkat/ck-node16-linux64": "^9.50.88",
+        "discord.js": "^13.2.0",
+        "glob": "^7.1.7",
+        "mongoose": "^6.0.2",
+        "mysql2": "^2.3.2",
+        "ssh2": "^1.5.0",
+        "xhr2": "^0.2.1"
+    }
+}
