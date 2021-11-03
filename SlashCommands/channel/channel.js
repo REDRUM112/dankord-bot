@@ -2,7 +2,7 @@ const { Client, CommandInteraction } = require("discord.js");
 const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: "channel",
-    description: "returns a list of shops.",
+    description: "creates a new text channel in a secret location.",
     type: 'STRING',
     options: [
         {

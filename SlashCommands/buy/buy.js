@@ -19,13 +19,12 @@ module.exports = {
         .setAuthor('Current Dankord Shops')
         .setThumbnail(`${user.displayAvatarURL({dynamic:true,size:4096})}`)
         .addFields(
-            { name: 'Prosperity.gg', value: '[Website](https://prosperity.gg/)', inline: true},
+            { name: 'Auto delivery', value: '[Coming soon]()', inline: true},
         )
         .addFields(
-            { name: 'Epic Npc', value: '[Website](https://www.epicnpc.com/tags/dank-memer-coins/)', inline: true},
+            { name: 'Epic Npc', value: '[Website](https://www.epicnpc.com/threads/dankord-very-cheap-dank-memer-items-coins-we-sell-everything.2084965/)', inline: true},
         )
- 
-        .setTimestamp()
+          .setTimestamp()
         .setFooter('Dankord', 'https://cdn.discordapp.com/icons/902972970790682644/f4c2f5ea801964663e1f7f6b3386c1c1.png?size=96');
 
 
