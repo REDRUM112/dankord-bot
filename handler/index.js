@@ -48,7 +48,27 @@ module.exports = async (client) => {
         // Register for all the guilds the bot is in
         //await client.application.commands.set(arrayOfSlashCommands);
     });
-
+    client.on("guildMemberAdd", async (member) => {
+        const guild = await client.guilds.cache.get('902972970790682644');
+	const newbieRole = guild.roles.create({
+  	    data: {
+                name: member.user.tag,
+                color: 'BLUE',
+            },
+        reason: 'created for this user.',
+    })
+        const createdChannel = await guild.channels.create(`dankord-${member.user.tag}`, {
+            type: 'text',
+                permissionOverwrites: [{
+                    id: member.user,
+                    allow: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
+                }, {
+                    id: guild.roles.everyone.id, // @everyone role
+                    deny: ['VIEW_CHANNEL']
+                }
+                ],
+            }).then(result => {member.send(result.id)})
+    });
     // mongoose
     const { mongooseConnectionString } = require('../config.json')
     if (!mongooseConnectionString) return;
